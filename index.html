@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="code.js"></script>
+</head>
+<body>
+    <div class="flex-container">
+        <div id="register">
+            <form onsubmit="submitHandler(event);" method="post" action="#" id="form">
+                <table>
+                    <tr>
+                        <td>Id</td>
+                        <td><input required type="number" name="id"></td>
+                    </tr>
+                    <tr>
+                        <td>Fname</td>
+                        <td><input required type="text" name="fname"></td>
+                    </tr>
+                    <tr>
+                        <td>Lname</td>
+                        <td><input required type="text" name="lname"></td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td><input required type="password" name="password"></td>
+                    </tr>
+                    <tr>
+                        <td>Confirm password</td>
+                        <td><input required type="password" name="cpass"></td>
+                    </tr>
+                    <tr>
+                        <td>Contact</td>
+                        <td><input required type="tel" pattern="[0-9]{10}" name="contact"></td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td><input required type="email" name="email"></td>
+                    </tr>
+                    <tr>
+                        <td>User_Type</td>
+                        <td>
+                            <select name="type">
+                                <option value="user">User</option>
+                                <option value="admin">Admin</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><button name="submit"  type="submit">Register</button></td>
+                        <td><button style="background-color: grey" name="submit"  type="reset">Reset</button></td>
+
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div id="login">
+            <form onsubmit="loginHandler(event)" action="#">
+                <table>
+                    <tr>
+                        <td>Enter Your Email</td>
+                        <td><input type="email" name="email"></td>
+                    </tr>
+                    <tr>
+                        <td>Enter Your Password</td>
+                        <td><input type="password" name="password"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><button type="submit">Login</button></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+    <div id="res"></div>
+</body>
+</html>
